@@ -114,6 +114,10 @@ body {
   color: var(--accent-color);
 }
 
+.footer-container > .logo {
+  margin-right: 0;
+}
+
 .logo-top {
   color: var(--logo-top-color);
 }
@@ -128,8 +132,7 @@ body {
 
 .navigation {
   display: flex;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  align-items: center;
 }
 
 .menu {
@@ -138,6 +141,7 @@ body {
 }
 
 .menu-link {
+  display: block;
   font-family: var(--primary-font);
   font-weight: 500;
   line-height: 1.14;
@@ -193,24 +197,33 @@ body {
 
 /* ======== HERO SECTION ======== */
 
-.hero {
+.hero > .container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+
+.hero {
+  /* display: flex;
   justify-content: center;
   text-align: center;
+  align-items: center; */
   padding-top: 200px;
   padding-bottom: 200px;
   background: var(--hero-footer-background);
 }
 
-.hero > .container {
+/* .hero > .container {
   display: block;
-}
+} */
 
 .hero-title {
+  width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
+  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--h1-button-text-color);
@@ -238,7 +251,6 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding-top: 94px;
 }
 
 .advantages-item {
@@ -263,7 +275,6 @@ body {
 /* ======== TASK SECTION ======== */
 
 .task {
-  margin-top: 94px;
   padding-bottom: 94px;
 }
 
@@ -281,7 +292,7 @@ body {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 50px;
+  margin-top: 50px;
 }
 
 .task-item {
@@ -292,6 +303,11 @@ body {
 
 .our-team-section {
   background: var(--radio-button-section-background);
+}
+
+.card-team-description {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .our-team-title {
@@ -313,8 +329,10 @@ body {
 }
 
 .team-item {
+  width: 270px;
   margin-left: 30px;
   margin-top: 30px;
+  background-color: var(--h1-button-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -329,13 +347,11 @@ body {
 
 .team-title-name {
   font-weight: 500;
-  padding-top: 30px;
   color: var(--primary-text-color);
 }
 
 .team-description {
   margin-top: 10px;
-  padding-bottom: 30px;
   color: var(--secondary-text-color);
 }
 /* ======== END OUR TEAM SECTION ======== */
@@ -353,6 +369,10 @@ body {
 .address {
   margin-top: 20px;
   font-style: normal;
+}
+
+.footer-margin {
+  margin-top: 9px;
 }
 
 .p-footer {
@@ -378,29 +398,27 @@ body {
 /* PORTTFOLIO CSS */
 /* ======== Radio button section ======== */
 
-.radio-button-section {
+.radio-buttons-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
-.radio-buttons-list {
-  display: flex;
-}
+/* .radio-button-item {
+  display: inline;
+} */
 
 .radio-button-item:not(:last-child) {
   margin-right: 8px;
 }
 
 .r-button {
+  cursor: pointer;
   line-height: 1.63;
   padding: 6px 22px;
   background: var(--radio-button-section-background);
   border: none;
   color: var(--primary-text-color);
-}
-
-.r-button {
-  cursor: pointer;
 }
 
 .r-button:hover,
@@ -418,15 +436,23 @@ body {
 
 /* ======== Portfolio section ======== */
 
+.portfolio-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   flex-basis: calc((100% - 60px) / 3);
-  margin-top: 34px;
+  margin-top: 50px;
 }
 
 .portfolio-item {
+  width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
 }
@@ -442,6 +468,7 @@ body {
 .description {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 .portfolio-title {
@@ -453,18 +480,17 @@ body {
 }
 
 .portfolio-p {
+  margin-top: 4px;
   font-size: var(--secondary-font-size);
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
 
-.portfolio-section {
-  width: 1200px;
+/* width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
-  margin-right: auto;
-}
+  margin-right: auto; */
 
 /* ======== Portfolio section END ======== */
